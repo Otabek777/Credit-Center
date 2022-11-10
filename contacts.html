@@ -15,6 +15,9 @@
     <header class="header">
         <div class="container">
             <div class="header__box">
+                <button class="btn_burgir">
+                    <span></span><span></span><span></span>
+                </button>
                 <a href="#" class="header__logo">
                     <img src="img/logo.svg" alt="">
                 </a>
@@ -48,7 +51,34 @@
     </header>
     <main class="main pages">
         <section class="contacts">
-            
+            <div class="container">
+                <div class="crumbs">
+                    <a href="#">Главная</a>
+                    <span>/</span>
+                </div>
+                <p class="title_h4">Контакты</p>
+                <div class="contacts__wrap">
+                    <div class="contacts__left">
+                        <p class="title">Головной офис:</p>
+                        <p class="text">г. Заринск, пр-т. Строителей, д. 15, кв. 38</p>
+                        <a href="tel:+7 (38595) 70 251" class="phone">+7 (38595) 70 251</a>
+                    </div>
+                    <div class="contacts__map">
+                        <div style="position:relative;overflow:hidden;"><a href="https://yandex.uz/maps/65/novosibirsk/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Новосибирск</a><a href="https://yandex.uz/maps/geo/novosibirsk/53118058/?ll=82.956043%2C55.002021&utm_medium=mapframe&utm_source=maps&z=10.76" style="color:#eee;font-size:12px;position:absolute;top:14px;">Новосибирск — Яндекс Карты</a><iframe src="https://yandex.uz/map-widget/v1/-/CCUbMJCgtD" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                    </div>
+                </div>
+                <div class="contacts__wrap">
+                    <div class="contacts__left">
+                        <p class="title">Структура подразделения:</p>
+                        <p class="text">с. Залесово, ул. Партизанская, д. 24Б</p>
+                        <a href="tel:+7 (923) 720-79-13" class="phone">+7 (923) 720-79-13</a>
+                        <a href="tel:+7 (385) 922-28-74" class="phone">+7 (385) 922-28-74</a>
+                    </div>
+                    <div class="contacts__map">
+                        <div style="position:relative;overflow:hidden;"><a href="https://yandex.uz/maps/65/novosibirsk/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Новосибирск</a><a href="https://yandex.uz/maps/geo/novosibirsk/53118058/?ll=82.956043%2C55.002021&utm_medium=mapframe&utm_source=maps&z=10.76" style="color:#eee;font-size:12px;position:absolute;top:14px;">Новосибирск — Яндекс Карты</a><iframe src="https://yandex.uz/map-widget/v1/-/CCUbMJCgtD" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                    </div>
+                </div>
+            </div>
         </section>
         <div class="container">
             <div class="company__banner2">
@@ -61,6 +91,27 @@
                 </div>
             </div>
         </div>
+        <section class="consultation consultation_mobile">
+            <img src="img/form-bg.png" alt="" class="consultation__bg">
+            <div class="container">
+                <p class="consultation__title">
+                    Получите <span>бесплатную</span> консультацию
+                </p>
+                <div class="consultation__form">
+                    <div class="input">
+                        <input type="text" placeholder="Ваше имя">
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="Телефон">
+                    </div>
+                    <div class="input">
+                        <input type="email" placeholder="Электронная почта">
+                    </div>
+                    <button class="btn">Отправить заявку</button>
+                    <p class="text">Нажимая на кнопку вы соглашаетесь с политикой конфиденциальности</p>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="container">
@@ -107,14 +158,6 @@
     <script src="slick-1.8.1/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-        $('.article__slider').slick({
-            arrows: true,
-            dots: false,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 4,
-            variableWidth: true
-        });
     </script>
 </body>
 </html>
