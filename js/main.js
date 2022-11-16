@@ -10,6 +10,33 @@ $('.besamogas').on('click', function(){
         scrollTop: 0
     }, 500);
 });
+$(".btn_burgir").click(function() {
+    if($(".btn_burgir").hasClass("active")) {
+        $(".header__navbar").removeClass("active");
+        $(".btn_burgir").removeClass("transform");
+        setTimeout(function() {
+            $(".btn_burgir").removeClass("active");
+        }, 300);
+    } else {
+        $(".header__navbar").addClass("active");
+        $(".btn_burgir").addClass("active");
+        setTimeout(function() {
+            $(".btn_burgir").addClass("transform");
+        }, 300);
+    }
+});
+$(".header__search .open").click(function() {
+    $(".header__search_wrap").addClass("active");
+    setTimeout(function() {
+        $(".header__search_wrap").addClass("opacity");
+    },1);
+});
+$(".header__search_wrap .close").click(function() {
+    $(".header__search_wrap").removeClass("opacity");
+    setTimeout(function() {
+        $(".header__search_wrap").removeClass("active");
+    },300);
+});
 // modal
 if(document.querySelector(".modal")){
     $(".open-modal").click(function() {

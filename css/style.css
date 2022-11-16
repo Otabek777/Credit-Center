@@ -216,6 +216,77 @@ ul, ol {
 
 .header__search {
   margin-left: 40px;
+  position: relative;
+}
+.header__search .open {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+.header__search_wrap {
+  display: none;
+  width: 480px;
+  height: 46px;
+  background: #FFFFFF;
+  box-shadow: 0px 15px 30px rgba(136, 161, 171, 0.15);
+  border-radius: 40px;
+  position: absolute;
+  top: 50%;
+  right: -16px;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: all .3s ease;
+  overflow: hidden;
+}
+.header__search_wrap .input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 40px;
+  padding: 0 50px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 92%;
+  border: 0;
+}
+.header__search_wrap .input::placeholder {
+  color: #919DA6;
+}
+.header__search_wrap .search {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  z-index: 1;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border: 0;
+  background-color: transparent;
+}
+.header__search_wrap .close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.header__search_wrap.active {
+  display: block;
+  z-index: 2;
+}
+.header__search_wrap.opacity {
+  opacity: 1;
 }
 
 .header__phone {
@@ -1564,7 +1635,7 @@ ul, ol {
 }
 
 .pages {
-  padding-top: 20px;
+  padding-top: 140px;
 }
 
 .crumbs {
@@ -2795,6 +2866,18 @@ input[type=range]::-moz-range-thumb {
 }
 
 @media screen and (max-width: 768px) {
+  .header__search {
+    position: static;
+  }
+  .header__search_wrap {
+    height: 42px;
+    right: 65px;
+    left: 44px;
+    width: auto;
+  }
+  .header__search_wrap .input {
+    font-size: 14px;
+  }
   .main {
     padding-top: 80px;
   }
@@ -2810,8 +2893,42 @@ input[type=range]::-moz-range-thumb {
   .header {
     height: 80px;
   }
-  .header__navbar, .header__nav_top {
+  .header__nav_top {
     display: none;
+  }
+  .header__navbar {
+    position: absolute;
+    top: -1px;
+    left: -200px;
+    opacity: 0;
+    z-index: 4;
+    width: 171px;
+    background: #FFFFFF;
+    box-shadow: 0px 15px 30px rgba(136, 161, 171, 0.25);
+    border-radius: 0 10px 10px 0;
+    transition: all .5s ease;
+  }
+  .header__navbar.active {
+    left: 0;
+    opacity: 1;
+  }
+  .header__navbar .ul {
+    flex-direction: column;
+    padding-top: 30px;
+  }
+  .header__navbar .li {
+    width: 100%;
+    margin: 0;
+    padding: 0 20px;
+  }
+  .header__navbar .item {
+    width: 100%;
+    display: block;
+    padding: 15px 0;
+    border-bottom: 1px solid #EAF2F6;
+  }
+  .header__navbar .li:last-child .item {
+    border: 0;
   }
   .header__call {
     display: none;
@@ -2839,6 +2956,9 @@ input[type=range]::-moz-range-thumb {
     background: #9AD22F url(../img/call.svg) no-repeat center;
     color: transparent;
   }
+  .header__phone:hover {
+    color: transparent;
+  }
   .btn_burgir {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2859,6 +2979,7 @@ input[type=range]::-moz-range-thumb {
     margin-right: 16px;
     background-color: transparent;
     position: relative;
+    z-index: 5;
     padding: 2px 0;
   }
   .btn_burgir span {
@@ -2867,6 +2988,22 @@ input[type=range]::-moz-range-thumb {
     height: 3px;
     background-color: #282828;
     border-radius: 2px;
+    transition: all .3s ease;
+  }
+  .btn_burgir.active span:nth-child(1) {
+    transform: translateY(6.5px);
+  }
+  .btn_burgir.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .btn_burgir.active span:nth-child(3) {
+    transform: translateY(-6.5px);
+  }
+  .btn_burgir.transform span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+  .btn_burgir.transform span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
   }
   .banner {
     height: 460px;
@@ -3228,7 +3365,7 @@ input[type=range]::-moz-range-thumb {
     padding-bottom: 37px;
   }
   .pages {
-    padding-top: 15px;
+    padding-top: 95px;
   }
   .crumbs {
     margin-bottom: 10px;
