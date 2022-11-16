@@ -89,7 +89,7 @@
             <div class="input">
                 <input type="email" placeholder="Электронная почта">
             </div>
-            <button class="btn">Отправить заявку</button>
+            <button class="btn modal-2-open">Отправить заявку</button>
         </div>
     </div>
     <div class="modal" id="modal-main2">
@@ -97,8 +97,6 @@
             <button class="modal__close"></button>
             <p class="title">Заявка отправлена!</p>
             <p class="text2">В ближайшее время с Вами свяжется наш менеджер</p>
-            <button class="btn">Закрыть</button>
-            <p class="text">Нажимая на кнопку вы соглашаетесь с политикой конфиденциальности</p>
         </div>
     </div>
     <div class="modal" id="modal-main3">
@@ -122,98 +120,102 @@
                 <p class="title_h4">Сбережения</p>
                 <div class="savings__filter">
                     <p class="title_h5">Расчитайте доход от сберегательной программы</p>
-                    <div class="news__tap">
-                        <button class="btn active">Годовая</button>
-                        <button class="btn">Сберегательная</button>
-                        <button class="btn">До востребования</button>
+                    <div class="news__tab">
+                        <button class="btn tab-btn-all active" id="tab-btn-1">Годовая</button>
+                        <button class="btn tab-btn-all" id="tab-btn-2">Сберегательная</button>
+                        <button class="btn tab-btn-all" id="tab-btn-3">До востребования</button>
                     </div>
-                    <div class="box">
-                        <div class="block">
-                            <p class="h5">Хочу вложить:</p>
-                            <div class="counter">
-                                <button class="minus">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="2" viewBox="0 0 16 2" fill="none">
-                                        <rect width="16" height="2" fill="#282828"/>
-                                    </svg>
-                                </button>
-                                <input type="text" value="456 412" class="input">
-                                <span class="span">₽</span>
-                                <button class="plus">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9 7V0H7V7H0V9H7V16H9V9H16V7H9Z" fill="#282828"/>
-                                    </svg>
-                                </button>
-                                <div class="slider_range_wrap">
-                                    <div class="slider_range" id="slider"></div>
+                    <div class="tab-block-all active" id="tab-block-1">
+                        <div class="box">
+                            <div class="block">
+                                <p class="h5">Хочу вложить:</p>
+                                <div class="counter">
+                                    <button class="minus">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="2" viewBox="0 0 16 2" fill="none">
+                                            <rect width="16" height="2" fill="#282828"/>
+                                        </svg>
+                                    </button>
+                                    <input type="text" value="456 412" class="input">
+                                    <span class="span">₽</span>
+                                    <button class="plus">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 7V0H7V7H0V9H7V16H9V9H16V7H9Z" fill="#282828"/>
+                                        </svg>
+                                    </button>
+                                    <div class="slider_range_wrap">
+                                        <div class="slider_range" id="slider"></div>
+                                    </div>
+                                    <!-- <input type="range" class="input_range"> -->
                                 </div>
-                                <!-- <input type="range" class="input_range"> -->
+                                <div class="limit">
+                                    <p>10 000 ₽ </p>
+                                    <p class="right">1 500 000 ₽ </p>
+                                </div>
                             </div>
-                            <div class="limit">
-                                <p>10 000 ₽ </p>
-                                <p class="right">1 500 000 ₽ </p>
+                            <div class="block">
+                                <p class="h5">На срок, в месяцах:</p>
+                                <div class="counter">
+                                    <button class="minus">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="2" viewBox="0 0 16 2" fill="none">
+                                            <rect width="16" height="2" fill="#282828"/>
+                                        </svg>
+                                    </button>
+                                    <input type="text" value="60" class="input input2">
+                                    <span class="span">месяцев</span>
+                                    <button class="plus">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 7V0H7V7H0V9H7V16H9V9H16V7H9Z" fill="#282828"/>
+                                        </svg>
+                                    </button>
+                                    <div class="slider_range_wrap">
+                                        <div class="slider_range" id="slider"></div>
+                                    </div>
+                                    <!-- <input type="range" class="input_range"> -->
+                                </div>
+                                <div class="limit">
+                                    <p class="right">60 месяцев</p>
+                                </div>
+                            </div>
+                            <div class="block">
+                                <p class="h5">Пополнять ежемесячно:</p>
+                                <div class="counter">
+                                    <button class="minus">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="2" viewBox="0 0 16 2" fill="none">
+                                            <rect width="16" height="2" fill="#282828"/>
+                                        </svg>
+                                    </button>
+                                    <input type="text" value="0" class="input">
+                                    <span class="span">₽</span>
+                                    <button class="plus">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 7V0H7V7H0V9H7V16H9V9H16V7H9Z" fill="#282828"/>
+                                        </svg>
+                                    </button>
+                                    <div class="slider_range_wrap">
+                                        <div class="slider_range" id="slider"></div>
+                                    </div>
+                                    <!-- <input type="range" class="input_range"> -->
+                                </div>
                             </div>
                         </div>
-                        <div class="block">
-                            <p class="h5">На срок, в месяцах:</p>
-                            <div class="counter">
-                                <button class="minus">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="2" viewBox="0 0 16 2" fill="none">
-                                        <rect width="16" height="2" fill="#282828"/>
-                                    </svg>
-                                </button>
-                                <input type="text" value="60" class="input input2">
-                                <span class="span">месяцев</span>
-                                <button class="plus">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9 7V0H7V7H0V9H7V16H9V9H16V7H9Z" fill="#282828"/>
-                                    </svg>
-                                </button>
-                                <div class="slider_range_wrap">
-                                    <div class="slider_range" id="slider"></div>
-                                </div>
-                                <!-- <input type="range" class="input_range"> -->
+                        <div class="bottom">
+                            <div class="wrap">
+                                <p class="h5">Вы получите:</p>
+                                <p class="price"><span class="green">585 600</span> ₽</p>
                             </div>
-                            <div class="limit">
-                                <p class="right">60 месяцев</p>
+                            <div class="wrap">
+                                <p class="h5">Проценты:</p>
+                                <p class="price"><span>85 600</span> ₽</p>
                             </div>
-                        </div>
-                        <div class="block">
-                            <p class="h5">Пополнять ежемесячно:</p>
-                            <div class="counter">
-                                <button class="minus">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="2" viewBox="0 0 16 2" fill="none">
-                                        <rect width="16" height="2" fill="#282828"/>
-                                    </svg>
-                                </button>
-                                <input type="text" value="0" class="input">
-                                <span class="span">₽</span>
-                                <button class="plus">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9 7V0H7V7H0V9H7V16H9V9H16V7H9Z" fill="#282828"/>
-                                    </svg>
-                                </button>
-                                <div class="slider_range_wrap">
-                                    <div class="slider_range" id="slider"></div>
-                                </div>
-                                <!-- <input type="range" class="input_range"> -->
+                            <div class="wrap">
+                                <p class="h5">Ставка:</p>
+                                <p class="price"><span>12</span> %</p>
                             </div>
+                            <button class="btn">Сделать вклад</button>
                         </div>
                     </div>
-                    <div class="bottom">
-                        <div class="wrap">
-                            <p class="h5">Вы получите:</p>
-                            <p class="price"><span class="green">585 600</span> ₽</p>
-                        </div>
-                        <div class="wrap">
-                            <p class="h5">Проценты:</p>
-                            <p class="price"><span>85 600</span> ₽</p>
-                        </div>
-                        <div class="wrap">
-                            <p class="h5">Ставка:</p>
-                            <p class="price"><span>12</span> %</p>
-                        </div>
-                        <button class="btn">Сделать вклад</button>
-                    </div>
+                    <div class="tab-block-all" id="tab-block-2"></div>
+                    <div class="tab-block-all" id="tab-block-3"></div>
                 </div>
                 <p class="title_h5">Сберегательные программы</p>
                 <div class="cards__box">
@@ -559,7 +561,7 @@
                     <div class="input">
                         <input type="email" placeholder="Электронная почта">
                     </div>
-                    <button class="btn">Отправить заявку</button>
+                    <button class="btn modal-2-open">Отправить заявку</button>
                     <p class="text">Нажимая на кнопку вы соглашаетесь с политикой конфиденциальности</p>
                 </div>
             </div>

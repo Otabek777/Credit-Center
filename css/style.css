@@ -2028,14 +2028,14 @@ ul, ol {
   padding-bottom: 88px;
 }
 
-.news__tap {
+.news__tab {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   border-bottom: 1px solid #EAF2F6;
   margin-bottom: 30px;
 }
-.news__tap .btn {
+.news__tab .btn {
   border: 0;
   background-color: transparent;
   font-weight: 400;
@@ -2045,9 +2045,13 @@ ul, ol {
   padding-bottom: 16px;
   border-bottom: 4px solid transparent;
   margin-right: 40px;
+  transition: all .3s ease;
 }
-.news__tap .btn.active {
+.news__tab .btn.active {
   font-weight: 700;
+  border-color: #9AD22F;
+}
+.news__tab .btn:hover {
   border-color: #9AD22F;
 }
 
@@ -2562,6 +2566,11 @@ input[type=range]::-moz-range-thumb {
   font-size: 16px;
   line-height: 92%;
   color: #FFFFFF;
+  transition: all .3s ease;
+}
+.loans__banner .btn:hover {
+  background-color: #FFFFFF;
+  color: #282828;
 }
 
 .loans__banner::after {
@@ -2864,8 +2873,18 @@ input[type=range]::-moz-range-thumb {
 .title_h2 .link:hover, .title_h3 .link:hover, .title_h4 .link:hover,  .title_h5 .link:hover {
   background-color: #72a711;
 }
+.tab-block-all {
+  display: none;
+}
+.tab-block-all.active {
+  display: block;
+}
 
 @media screen and (max-width: 768px) {
+  .modal .consultation__form {
+      width: 90%;
+      padding: 40px 15px 30px 15px;
+  }
   .header__search {
     position: static;
   }
@@ -3629,14 +3648,14 @@ input[type=range]::-moz-range-thumb {
   .news {
     display: block;
   }
-  .news__tap {
+  .news__tab {
     margin-bottom: 20px;
     overflow-x: auto;
   }
-  .news__tap .btn {
+  .news__tab .btn {
     white-space: nowrap;
   }
-  .news__tap .btn {
+  .news__tab .btn {
     margin-right: 20px;
     padding-bottom: 14px;
     font-size: 16px;
