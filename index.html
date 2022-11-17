@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="css/style.css">
@@ -83,7 +84,7 @@
                 <input type="text" placeholder="Ваше имя">
             </div>
             <div class="input">
-                <input type="text" placeholder="Телефон">
+                <input class="tel input_phone" type="text" placeholder="Телефон">
             </div>
             <div class="input">
                 <input type="email" placeholder="Электронная почта">
@@ -702,7 +703,7 @@
                     <div class="aboust_us__right">
                         <div class="aboust_us__slider">
                             <div class="aboust_us__slider_wrap">
-                                <div class="aboust_us__slider__block">
+                                <a href="img/doc1.png" data-fancybox="gal" class="aboust_us__slider__block">
                                     <div class="img">
                                         <img src="img/doc1.png" alt="">
                                     </div>
@@ -714,12 +715,12 @@
                                         </div>
                                         <p>Приблизить</p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             <div class="aboust_us__slider_wrap">
-                                <div class="aboust_us__slider__block">
+                                <a href="img/doc2.png" data-fancybox="gal" class="aboust_us__slider__block">
                                     <div class="img">
-                                        <img src="img/doc2.png" alt="">
+                                        <img class="img-fluid" src="img/doc2.png" alt="">
                                     </div>
                                     <div class="green">
                                         <div class="icon">
@@ -729,12 +730,12 @@
                                         </div>
                                         <p>Приблизить</p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             <div class="aboust_us__slider_wrap">
-                                <div class="aboust_us__slider__block">
+                                <a href="img/doc3.png" data-fancybox="gal" class="aboust_us__slider__block">
                                     <div class="img">
-                                        <img src="img/doc3.png" alt="">
+                                        <img class="img-fluid" src="img/doc3.png" alt="">
                                     </div>
                                     <div class="green">
                                         <div class="icon">
@@ -744,12 +745,12 @@
                                         </div>
                                         <p>Приблизить</p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             <div class="aboust_us__slider_wrap">
-                                <div class="aboust_us__slider__block">
+                                <a href="img/doc4.png" data-fancybox="gal" class="aboust_us__slider__block">
                                     <div class="img">
-                                        <img src="img/doc4.png" alt="">
+                                        <img class="img-fluid" src="img/doc4.png" alt="">
                                     </div>
                                     <div class="green">
                                         <div class="icon">
@@ -759,12 +760,12 @@
                                         </div>
                                         <p>Приблизить</p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             <div class="aboust_us__slider_wrap">
-                                <div class="aboust_us__slider__block">
+                                <a href="img/doc4.png" data-fancybox="gal" class="aboust_us__slider__block">
                                     <div class="img">
-                                        <img src="img/doc4.png" alt="">
+                                        <img class="img-fluid" src="img/doc4.png" alt="">
                                     </div>
                                     <div class="green">
                                         <div class="icon">
@@ -774,7 +775,7 @@
                                         </div>
                                         <p>Приблизить</p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -976,7 +977,7 @@
                         <input type="text" placeholder="Ваше имя">
                     </div>
                     <div class="input">
-                        <input type="text" placeholder="Телефон">
+                        <input class="tel input_phone" type="text" placeholder="Телефон">
                     </div>
                     <div class="input">
                         <input type="email" placeholder="Электронная почта">
@@ -1035,6 +1036,7 @@
     
     <script src="js/jquery.min.js"></script>
     <script src="slick-1.8.1/slick/slick.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/main.js"></script>
     <script>
         $('.banner__slider').slick({
@@ -1091,7 +1093,6 @@
                 variableWidth: true
             });
         };
-        
     </script>
 </body>
 </html>

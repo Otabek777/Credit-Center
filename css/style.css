@@ -2719,6 +2719,7 @@ input[type=range]::-moz-range-thumb {
   cursor: pointer;
   bottom: -100%;
   box-shadow: 10px 10px 24px rgba(154, 210, 47, 0.3);
+  z-index: 99;
 }
 .besamogas svg {
   transform: rotate(90deg);
@@ -2879,8 +2880,19 @@ input[type=range]::-moz-range-thumb {
 .tab-block-all.active {
   display: block;
 }
+.fancybox-navigation .fancybox-button--arrow_right, .fancybox-navigation .fancybox-button--arrow_left, .fancybox-infobar, .fancybox-button.fancybox-button--play {
+  display: none !important;
+}
 
 @media screen and (max-width: 768px) {
+  .besamogas {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .besamogas svg {
+    width: 10px;
+  }
   .modal .consultation__form {
       width: 90%;
       padding: 40px 15px 30px 15px;
